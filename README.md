@@ -1,29 +1,34 @@
-# ictsc-score
+# PJama
 
 ## Concept
 
+PJama (ぱじゃま) は、ICTSCで利用するスコアサーバです。
+
+
 ## Installation
+
+```bash
+# チェックアウト
+git clone git@github.com:ictsc/ictsc-score.git
+cd ictsc-score
+# パッケージのインストール
+pip install -r requirements.txt
+# 自動整形
+pip install autopep8
+wget https://raw.githubusercontent.com/chibiegg/git-autopep8/master/pre-commit -O .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+
+# 動作チェック
+cd src
+python manage.py migrate # DBの作成
+python manage.py runserver # テストサーバの起動
+```
 
 ## Getting Started
 
-You can find further information to use ictsc-score on [ictsc-score Wiki](https://github.com/ictsc/ictsc-score/wiki).
+開発環境の構築については [ictsc-score Wiki](https://github.com/ictsc/ictsc-score/wiki) を参照してください。
 
-Enjoy!
 
 ## Documentation
 
 https://github.com/ictsc/ictsc-score/wiki
-
-## Run tests
-
-## Presentations / Articles
-
-## Contributing
-
-If you have a problem, please [create an issue](https://github.com/ictsc/ictsc-score/issues/new) or a pull request.
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
