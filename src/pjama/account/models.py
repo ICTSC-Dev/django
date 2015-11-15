@@ -46,7 +46,8 @@ class Team(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
     class Meta:
-        verbose_name="Team"
+        verbose_name="チーム名"
+        verbose_name_plural="チーム一覧"
         ordering=['created_at']
         swappable = 'AUTH_USER_MODEL'
 

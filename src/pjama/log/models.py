@@ -13,7 +13,8 @@ class Result(models.Model):
     updated_at               = models.DateTimeField(blank=True, null=True, auto_now=True)
 
     class Meta:
-        verbose_name="Result"
+        verbose_name="採点記録"
+        verbose_name_plural="採点一覧"
         ordering=['-updated_at']
 
 
@@ -26,7 +27,8 @@ class Submit(models.Model):
     updated_at               = models.DateTimeField(blank=True, null=True, auto_now=True)
 
     class Meta:
-        verbose_name="Submit"
+        verbose_name="提出記録"
+        verbose_name_plural="提出記録一覧"
         ordering=['-updated_at']
 
 class PartialResult(models.Model):
@@ -38,6 +40,7 @@ class PartialResult(models.Model):
     updated_at               = models.DateTimeField(blank=True, null=True, auto_now=True)
 
     class Meta:
-        verbose_name="PartialResult"
+        verbose_name="配点結果"
+        verbose_name_plural="配点結果一覧"
         ordering=['-updated_at']
 

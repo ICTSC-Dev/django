@@ -14,7 +14,8 @@ class Problem(models.Model):
     fix_num                     = models.IntegerField(default=0)
 
     class Meta:
-        verbose_name="Problem"
+        verbose_name="問題"
+        verbose_name_plural="問題一覧"
         ordering=['number']
 
 class PartialPoint(models.Model):
@@ -24,7 +25,8 @@ class PartialPoint(models.Model):
     updated_at                  =  models.DateTimeField(blank=True, null=True, auto_now=True)
 
     class Meta:
-        verbose_name="PartialPoint"
+        verbose_name="配点情報"
+        verbose_name_plural="配点一覧"
         ordering=['created_at']
 
 
