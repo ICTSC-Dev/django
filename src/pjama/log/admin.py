@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Log.models import Result,Submit,PartialResult
+from pjama.log.models import Result,Submit,PartialResult
 # Register your models here.
 
 admin.site.register(Result)

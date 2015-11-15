@@ -40,10 +40,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'Account',
-    'Log',
-    'Problems',
-    'Notice'
+    'pjama.account',
+    'pjama.log',
+    'pjama.problem',
+    'pjama.notice'
 )
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
@@ -52,7 +52,7 @@ AUTHENTICATION_BACKENDS = (
 
 
 
-AUTH_USER_MODEL = 'Account.Team'
+AUTH_USER_MODEL = 'account.Team'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

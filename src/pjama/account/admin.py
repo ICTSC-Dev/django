@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from Account.models import Team
+from pjama.account.models import Team
 
 admin.site.register(Team)
