@@ -31,7 +31,7 @@ class TeamManager(BaseUserManager):
                                  **extra_fields)
 
 class Team(AbstractBaseUser, PermissionsMixin):
-    team_name                       =  models.CharField(max_length=255, blank=True, default='', unique=True)
+    team_name                       =  models.CharField(max_length=255, unique=True)
     organization                    =  models.CharField(max_length=255, blank=True, default='')
     email                            =  models.EmailField(max_length=255)
     problem_num                     =  models.IntegerField(blank=True, null=True, default=0)
@@ -47,7 +47,6 @@ class Team(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['email']
     class Meta:
         verbose_name="チーム名"
-        verbose_name_plural="チーム一覧"
         ordering=['created_at']
         swappable = 'AUTH_USER_MODEL'
 

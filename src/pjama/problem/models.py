@@ -15,7 +15,6 @@ class Problem(models.Model):
 
     class Meta:
         verbose_name="問題"
-        verbose_name_plural="問題一覧"
         ordering=['number']
 
 class PartialPoint(models.Model):
@@ -26,7 +25,6 @@ class PartialPoint(models.Model):
 
     class Meta:
         verbose_name="配点情報"
-        verbose_name_plural="配点一覧"
         ordering=['created_at']
 
 
