@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from pjama.account.urls import router as accountRouter
+from pjama.log.urls import router as logRouter
+from pjama.problem.urls import router as problemRouter
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$', 'pjama.account.views.signin'),
+    url(r'^logout/$', 'pjama.account.views.signout'),
+    url(r'^api/', include(accountRouter.urls)),
+    url(r'^api/', include(logRouter.urls)),
+    url(r'^api/', include(problemRouter.urls)),
 ]
+

@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Problem(models.Model):
     number                      = models.IntegerField(default=0)
     is_public                   = models.BooleanField(default=False)
@@ -16,6 +15,7 @@ class Problem(models.Model):
     class Meta:
         verbose_name="問題"
         ordering=['number']
+
 
 class PartialPoint(models.Model):
     problem                     = models.ForeignKey(Problem)

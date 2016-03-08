@@ -43,7 +43,9 @@ INSTALLED_APPS = (
     'pjama.account',
     'pjama.log',
     'pjama.problem',
-    'pjama.notice'
+    'pjama.notice',
+    'rest_framework',
+    'rest_framework.authtoken'
 )
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.RemoteUserBackend',
@@ -53,6 +55,16 @@ AUTHENTICATION_BACKENDS = (
 
 
 AUTH_USER_MODEL = 'account.Team'
+
+REST_AUTH_SERIALIZERS = { 'USER_DETAILS_SERIALIZER':'pjama.account.accountSerializer.TeamSerializer' }
+
+REST_FRAMEWORK = {
+                'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+                'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
+                'PAGE_SIZE': 10
+                }
+
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

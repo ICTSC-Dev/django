@@ -1,4 +1,4 @@
-from django.db import models
+:from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager,PermissionsMixin
 from django.utils import timezone
 from django.utils.timezone import now
@@ -46,7 +46,7 @@ class Team(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
     class Meta:
-        verbose_name="„ÉÅ„Éº„É†Âêç"
+        verbose_name="í•¡í°ºí•‡íÃæ"
         ordering=['created_at']
         swappable = 'AUTH_USER_MODEL'
 
